@@ -6,9 +6,9 @@ Reference: "xDeepFM: Combining Explicit and Implicit Feature Interactions for Re
 """
 
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Embedding, Dropout, Flatten, Dense, Input
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Embedding, Dropout, Flatten, Dense, Input
+from keras.regularizers import l2
 
 from reclearn.layers import Linear, MLP, CIN
 from reclearn.layers.utils import index_mapping

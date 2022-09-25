@@ -5,9 +5,9 @@ Reference: "DeepFM: A Factorization-Machine based Neural Network for CTR Predict
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.regularizers import l2
-from tensorflow.keras.layers import Embedding, Dropout, Dense, Input, Layer
+from keras import Model
+from keras.regularizers import l2
+from keras.layers import Embedding, Dropout, Dense, Input, Layer
 
 from reclearn.layers import New_FM, MLP
 from reclearn.layers.utils import index_mapping

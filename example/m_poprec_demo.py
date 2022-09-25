@@ -5,7 +5,7 @@ train PopRec demo
 """
 import os
 from time import time
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 
 from reclearn.models.matching import PopRec
 from reclearn.data.datasets import movielens as ml

@@ -6,9 +6,9 @@ Reference: "Product-based Neural Networks for User Response Prediction", ICDM, 2
 """
 
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Embedding, Dense, Layer, Dropout, Input
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Embedding, Dense, Layer, Dropout, Input
+from keras.regularizers import l2
 
 from reclearn.layers import MLP
 

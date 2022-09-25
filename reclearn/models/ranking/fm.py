@@ -5,9 +5,9 @@ Reference: "Factorization Machines", ICDM, 2010
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Layer, Input
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Layer, Input
+from keras.regularizers import l2
 
 from reclearn.layers import FM_Layer
 

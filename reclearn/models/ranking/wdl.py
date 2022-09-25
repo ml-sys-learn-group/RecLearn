@@ -6,9 +6,9 @@ Reference: "Wide & Deep Learning for Recommender Systems", DLRS, 2016
 """
 
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Dense, Embedding, Dropout, Input
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Dense, Embedding, Dropout, Input
+from keras.regularizers import l2
 
 from reclearn.layers import Linear, MLP
 from reclearn.layers.utils import index_mapping

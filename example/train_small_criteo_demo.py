@@ -4,10 +4,10 @@ using small criteo dataset to train the model.
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras.losses import binary_crossentropy
-from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.metrics import AUC
+from keras.losses import binary_crossentropy
+from keras.callbacks import EarlyStopping
+from keras.optimizers import Adam
+from keras.metrics import AUC
 
 from reclearn.models.ranking import FM
 from reclearn.data.datasets.criteo import create_small_criteo_dataset

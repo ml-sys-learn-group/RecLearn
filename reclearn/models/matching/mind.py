@@ -4,9 +4,9 @@ Reference: "Multi-Interest Network with Dynamic Routing for Recommendation at Tm
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Input
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Input
+from keras.regularizers import l2
 
 from reclearn.layers.core import CapsuleNetwork
 
@@ -98,12 +98,18 @@ class MIND(Model):
                                        axis=-1)  # (None, neg_num)
             logits = tf.concat([pos_scores, neg_scores], axis=-1)
             return logits
-
-    def summary(self):
+        
+    def intern_model(self):
         inputs = {
-            'click_seq': Input(shape=(self.seq_len,), dtype=tf.int32),
-            'pos_item': Input(shape=(), dtype=tf.int32),
-            'neg_item': Input(shape=(1,), dtype=tf.int32)  # suppose neg_num=1
+            'click_seq': Input(shape=(self.seq_len,), dtype=tf.int32, name='click_seq'),
+            'pos_item': Input(shape=(), dtype=tf.int32, name='pos_item'),
+            'neg_item': Input(shape=(1,), dtype=tf.int32, name='neg_item')  # suppose neg_num=1
         }
-        Model(inputs=inputs, outputs=self.call(inputs)).summary()
+        
+        intern_model = Model(inputs=inputs, outputs=self.call(inputs, training=True))
+        return intern_model
+    
+    def summary(self):
+        self.intern_model().summary()
+       
 

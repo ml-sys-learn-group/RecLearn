@@ -5,9 +5,9 @@ Reference: "Personalized Top-N Sequential Recommendation via Convolutional Seque
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Embedding, Input, Conv1D, GlobalMaxPooling1D, Dense, Dropout
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Embedding, Input, Conv1D, GlobalMaxPooling1D, Dense, Dropout
+from keras.regularizers import l2
 
 from reclearn.models.losses import get_loss
 

@@ -5,9 +5,9 @@ Reference: "Neural Factorization Machines for Sparse Predictive Analytics", SIGI
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Embedding, Dropout, Layer, Dense, Input, BatchNormalization
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Embedding, Dropout, Layer, Dense, Input, BatchNormalization
+from keras.regularizers import l2
 
 from reclearn.layers import MLP
 

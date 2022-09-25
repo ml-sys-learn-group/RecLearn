@@ -6,7 +6,7 @@ import pandas as pd
 import tensorflow as tf
 from tqdm import tqdm
 from collections import defaultdict
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+from keras_preprocessing.sequence import pad_sequences
 
 MAX_ITEM_NUM = 3953
 MAX_USER_NUM = 6041

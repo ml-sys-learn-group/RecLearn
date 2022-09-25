@@ -7,9 +7,9 @@ Reference: "FISSA: fusing item similarity models with self-attention networks fo
 """
 import tensorflow as tf
 
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Embedding, Input, LayerNormalization, Dropout
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Embedding, Input, LayerNormalization, Dropout
+from keras.regularizers import l2
 
 from reclearn.layers import TransformerEncoder, LBA, Item_similarity_gating
 from reclearn.models.losses import get_loss

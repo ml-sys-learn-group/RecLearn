@@ -5,9 +5,9 @@ Reference: "Session-based Recommendation with Recurrent Neural Networks", ICLR, 
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Dense, Dropout, Embedding, Input, GRU
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Dense, Dropout, Embedding, Input, GRU
+from keras.regularizers import l2
 
 from reclearn.models.losses import get_loss
 

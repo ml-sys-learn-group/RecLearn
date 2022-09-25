@@ -5,9 +5,9 @@ Reference: "Self-Attentive Sequential Recommendation", ICDM, 2018
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Layer, Dense, LayerNormalization, Dropout, Embedding, Input
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Layer, Dense, LayerNormalization, Dropout, Embedding, Input
+from keras.regularizers import l2
 
 from reclearn.layers import TransformerEncoder
 from reclearn.models.losses import get_loss

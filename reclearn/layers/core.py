@@ -5,8 +5,8 @@ core layers
 """
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.layers import Layer, Dense, Dropout, BatchNormalization, LayerNormalization, Conv1D, ReLU
-from tensorflow.keras.regularizers import l2
+from keras.layers import Layer, Dense, Dropout, BatchNormalization, LayerNormalization, Conv1D, ReLU
+from keras.regularizers import l2
 
 from reclearn.layers.utils import scaled_dot_product_attention, split_heads, index_mapping
 

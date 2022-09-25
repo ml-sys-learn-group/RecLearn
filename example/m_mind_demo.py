@@ -4,9 +4,15 @@ train MIND demo
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import os
+import sys
+base_path = os.path.dirname(__file__)
+print(base_path)
+sys.path.append(f"{base_path}/../")
+
+
 from absl import flags, app
 from time import time
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 
 from reclearn.models.matching import MIND
 from reclearn.data.datasets import movielens as ml
@@ -19,7 +25,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '6'
 
 # Setting training parameters
 flags.DEFINE_string("file_path", "data/ml-1m/ratings.dat", "file path.")
-flags.DEFINE_string("train_path", "data/ml-1m/ml_seq_train.txt", "train path. If set to None, the program will split the dataset.")
+flags.DEFINE_string("train_path", "None", "train path. If set to None, the program will split the dataset.")
 flags.DEFINE_string("val_path", "data/ml-1m/ml_seq_val.txt", "val path.")
 flags.DEFINE_string("test_path", "data/ml-1m/ml_seq_test.txt", "test path.")
 flags.DEFINE_string("meta_path", "data/ml-1m/ml_seq_meta.txt", "meta path.")

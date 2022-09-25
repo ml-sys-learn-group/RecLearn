@@ -6,9 +6,9 @@ Reference: "Attentional Factorization Machines: Learning the Weight of Feature I
 """
 import itertools
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.regularizers import l2
-from tensorflow.keras.layers import Embedding, Dropout, Dense, Dropout, Input
+from keras import Model
+from keras.regularizers import l2
+from keras.layers import Embedding, Dropout, Dense, Dropout, Input
 
 
 class AFM(Model):

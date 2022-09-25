@@ -4,9 +4,9 @@ Reference: "Learning Deep Structured Semantic Models for Web Search using Clickt
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Input
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Input
+from keras.regularizers import l2
 from reclearn.layers import MLP
 
 

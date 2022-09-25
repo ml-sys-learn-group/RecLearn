@@ -6,9 +6,9 @@ Reference: "Field-aware Factorization Machines for CTR Prediction", RecSys, 2016
 """
 
 import tensorflow as tf
-from tensorflow.keras import Model
-from tensorflow.keras.layers import Input, Layer
-from tensorflow.keras.regularizers import l2
+from keras import Model
+from keras.layers import Input, Layer
+from keras.regularizers import l2
 
 from reclearn.layers import FFM_Layer
 

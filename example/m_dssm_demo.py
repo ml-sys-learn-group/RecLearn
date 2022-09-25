@@ -4,9 +4,14 @@ train DSSM demo
 @author: Ziyao Geng(zggzy1996@163.com)
 """
 import os
+import sys
+base_path = os.path.dirname(__file__)
+print(base_path)
+sys.path.append(f"{base_path}/../")
+
 from absl import flags, app
 from time import time
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 
 from reclearn.models.matching import DSSM
 from reclearn.data.datasets import movielens as ml
@@ -34,7 +39,7 @@ flags.DEFINE_string("loss_name", "binary_cross_entropy_loss", "Loss Name.")
 flags.DEFINE_float("gamma", 0.5, "If hinge_loss is selected as the loss function, you can specify the margin.")
 flags.DEFINE_float("learning_rate", 0.001, "Learning rate.")
 flags.DEFINE_integer("neg_num", 4, "The number of negative sample for each positive sample.")
-flags.DEFINE_integer("epochs", 20, "train steps.")
+flags.DEFINE_integer("epochs", 1, "train steps.")
 flags.DEFINE_integer("batch_size", 512, "Batch Size.")
 flags.DEFINE_integer("test_neg_num", 100, "The number of test negative samples.")
 flags.DEFINE_integer("k", 10, "recall k items at test stage.")
@@ -82,6 +87,9 @@ def main(argv):
         eval_dict = eval_pos_neg(model, test_data, ['hr', 'mrr', 'ndcg'], FLAGS.k, FLAGS.batch_size)
         print('Iteration %d Fit [%.1f s], Evaluate [%.1f s]: HR = %.4f, MRR = %.4f, NDCG = %.4f'
               % (epoch, t2 - t1, time() - t2, eval_dict['hr'], eval_dict['mrr'], eval_dict['ndcg']))
+        
+    
+    model.save("./dssm_model")
 
 
 if __name__ == '__main__':
